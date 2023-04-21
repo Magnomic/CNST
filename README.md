@@ -18,7 +18,15 @@
 
 ## Tips for Running the Codes:
 
-1. Please unzip the dataset in `/data` directory before trying `*.ipynb` files.
+1. Please unzip the dataset in `./data` directory before trying `*.ipynb` files.
+
+- `./data/new*.zip` are the output of S2S cases generating model.
+
+- `./data/*_npy.zip` are the raw LIFS data in different envrionments.
+
+- `./data/*_wv.zip` are the denoised LIFS data by wavelet model in different envrionments.
+
+- `./data/baseline_output.zip` saves the output of CNPT models, i.e., the data feed to COD parameter analysis model for validating.
 
 2. The pre-trained analysis model for feature extracting model in S2S case generating process is `/save/model_1DCNN_MIX.pth`.
 
