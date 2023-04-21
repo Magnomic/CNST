@@ -1,6 +1,6 @@
 # Learn Noise Patterns using Cases: A CBR-based Method for 1D Spectral Noise Patterns Transfer
 
-### Authors: Haiwen Du, Zheng Ju, Yu An, Honghui Du, Dongjie Zhu, Zhaoshuo Tian, Aonghus Lawlor and Ruihai Dong
+### Authors: Haiwen Du, Zheng Ju, Yu An, Honghui Du, Dongjie Zhu\*, Zhaoshuo Tian, Aonghus Lawlor and Ruihai Dong\*
 
 ### This work has been submitted to ICCBR-2023 (Under review)
 
