@@ -60,11 +60,11 @@ With this, we only need to train the model in one noise pattern, and then we can
 
 ## Proposed Method:
 
-Based on the hypothesis that deeper convolutional layers can better extract the *environmental noise* $N_{\mathbb{S}}$ and signal $X$ of the samples in datasets $D_{\mathbb{S}}$, and shallower convolutional layers can better extract the *internal noise* $N_{T}$ of the samples in datasets $D_{\mathbb{T}}$. We can use them and generate a sample $G = X + N_{\mathbb{S}} + N_{T}$ such that its difference from $T$ is $N_{\mathbb{S} - \mathbb{T}}$.
+Based on the hypothesis that deeper convolutional layers can better extract the *environmental noise* $N_{\mathbb{S}}$ and signal $X$ of the samples in datasets $D_{\mathbb{S}}$, and shallower convolutional layers can better extract the *internal noise* $\xi_{T}$ of the samples in datasets $D_{\mathbb{T}}$. We can use them and generate a sample $G = X + N_{\mathbb{S}} + \xi_{T}$ such that its difference from $T$ is $N_{\mathbb{S} - \mathbb{T}}$.
 
 ![Fig.4](images/Fig.4.jpg "Fig.4")
 
-Our system has two types of cases, D2D cases and S2S cases, if we want to transfer the *environmental noise* pattern $N_{\mathbb{S}}$ in $D_{\mathbb{S}}$ to the *environmental noise* pattern $N_{\mathbb{T}}$ in $D_{\mathbb{T}}$, a D2D case is a sample $S$ in $D_{\mathbb{S}}$ and random sample $T$ in $D_{\mathbb{T}}$ that is measured using the same standard solution but under different environments. Although all of the S2S and D2D cases have the same $N_{\mathbb{S}-\mathbb{T}}$, D2D cases have different *internal noise* while S2S cases have the same *internal noise*. An S2S case is a pair of a sample $G$ in $D_{\mathbb{G}}$ and a sample $T$ that has the same *internal noise* $N_{T}$.
+Our system has two types of cases, D2D cases and S2S cases, if we want to transfer the *environmental noise* pattern $N_{\mathbb{S}}$ in $D_{\mathbb{S}}$ to the *environmental noise* pattern $N_{\mathbb{T}}$ in $D_{\mathbb{T}}$, a D2D case is a sample $S$ in $D_{\mathbb{S}}$ and random sample $T$ in $D_{\mathbb{T}}$ that is measured using the same standard solution but under different environments. Although all of the S2S and D2D cases have the same $N_{\mathbb{S}-\mathbb{T}}$, D2D cases have different *internal noise* while S2S cases have the same *internal noise*. An S2S case is a pair of a sample $G$ in $D_{\mathbb{G}}$ and a sample $T$ that has the same *internal noise* $\xi_{T}$.
 
 ![Fig.5](images/Fig.5.jpg "Fig.5")
 
