@@ -74,6 +74,8 @@ We show the convolution kernel used to compute the feature map in the top part o
 
 ![Fig.6](images/Fig.6.jpg "Fig.6")
 
-The experimental results of our CBR-based model and baselines. The first three groups of results are the tasks that transfer the noise patterns from a dataset with strong noise patterns to a less noisy one, i.e., denoising tasks. The other is to transfer the noise patterns from a dataset to a dataset with stronger noise patterns. Each group of results uses two training ratios: 50\% and 100\%, which means the concentrations of samples we use when training the model.
+The baselines we use are wavelet denoising, autoencoder (AE), 1D DnCNN, and 1D CycleGAN. They are representatives of traditional, DNN, and adversarial generation methods and are suitable for the target task. Besides, we present the accuracy of the COD parameter analysis model using the unprocessed data in $D_\mathbb{S}$ and $D_\mathbb{T}$, which provides references to the performance of baselines. 
+
+We use two training ratios (30\% and 50\%) to train the noise transfer model, i.e., use only a training set in 3 and 5 of 10 standard water solutions, while all ten groups of data are used for the validation set. It can indicate the generalisation ability and the effect of the CBR method with generated cases (CBR-GC). 
 
 ![Fig.7](images/Fig.7.jpg "Fig.7")
