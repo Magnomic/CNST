@@ -1,19 +1,18 @@
-# Learn Noise Patterns using Cases: A CBR-based Method for 1D Spectral Noise Patterns Transfer
+# Can We Transfer Noise Patterns? A Multi-environment Spectrum Analysis Model Using Generated Cases
 
 ### Authors: Haiwen Du, Zheng Ju, Yu An, Honghui Du, Dongjie Zhu\*, Zhaoshuo Tian, Aonghus Lawlor and Ruihai Dong\*
 
-### This work has been submitted to ICCBR-2023 (Under review)
+### This work has been submitted to ICONIP-2023 (Under review)
 
 ---
 
 ## Highlights:
 
-- We develop a CBR-based model to transfer the *environmental noise* pattern of dataset $D_\mathbb{S}$ into the *environmental noise* pattern of dataset $D_\mathbb{T}$ (also denoising when $D_\mathbb{T}$ is *environmental noise*-free);
+- we develop a noise transfer model to transfer the \textit{environmental noise} pattern  $N_\mathbb{S}$ of dataset $D_\mathbb{S}$ into the \textit{environmental noise} pattern $N_\mathbb{T}$ of dataset $D_\mathbb{T}$ (also denoising when $D_\mathbb{T}$ is \textit{environmental noise}-free);
 
-- It is the first work to enhance the learning effect of CBR models by generating cases;
+- propose a network structure for extracting \textit{environmental noise} $N_\mathbb{S}$, signal $X$, and \textit{baseline noise} $\xi_{T}$ from a D2D case $S$ and $T$, thereby generating a new sample $G$ that only have \textit{environmental noise} pattern differences $N_\mathbb{S-T}$ with sample $T$. It is the first work to enhance the learning performance of denoising models by generating new cases; and
 
-- Verify the contribution of CBR on noise patterns transferring tasks by evaluating the performance of our model on chemical oxygen demand (COD) parameter analysis tasks.
-
+- verify the contribution of our model on 1D LIFS noise patterns transferring tasks. It significantly improves the performance of chemical oxygen demand (COD) parameter analysis model under different noise patterns.
 ---
 
 ## Tips for Running the Codes:
@@ -40,9 +39,9 @@
 
 We build a **sample-sample** (S2S) case base to exclude the interference of **sample-level noise** on **dataset-level noise** learning, enhancing the CBR system's learning performance. Experiments on spectral data with different background noises demonstrate the good noise-transferring ability of the proposed method against baseline systems ranging from wavelet denoising, deep neural networks, and generative models. We posit that our method can enhance the performance of DL models by generating high-quality case bases, extending CBR's application scope.
 
-## CBR in Existing Noise Transfer Models:
+## Cases in Existing Noise Transfer Models:
 
-It is suitale to apply CBR systems to the target task. We can uses the LIFS of the same standard solution in different environments as cases. Therefore, noise pattern differences can be learned by analysing these cases and applied to transfer noise patterns of unknown samples.
+It is suitale to apply systems to the target task. We can uses the LIFS of the same standard solution in different environments as cases. Therefore, noise pattern differences can be learned by analysing these cases and applied to transfer noise patterns of unknown samples.
 
 With this, we only need to train the model in one noise pattern, and then we can process the data in various environments by unifying their noise patterns.
 
@@ -76,6 +75,6 @@ We show the convolution kernel used to compute the feature map in the top part o
 
 The baselines we use are wavelet denoising, autoencoder (AE), 1D DnCNN, and 1D CycleGAN. They are representatives of traditional, DNN, and adversarial generation methods and are suitable for the target task. Besides, we present the accuracy of the COD parameter analysis model using the unprocessed data in $D_\mathbb{S}$ and $D_\mathbb{T}$, which provides references to the performance of baselines. 
 
-We use two training ratios (30\% and 50\%) to train the noise transfer model, i.e., use only a training set in 3 and 5 of 10 standard water solutions, while all ten groups of data are used for the validation set. It can indicate the generalisation ability and the effect of the CBR method with generated cases (CBR-GC). 
+We use two training ratios (30\% and 50\%) to train the noise transfer model, i.e., use only a training set in 3 and 5 of 10 standard water solutions, while all ten groups of data are used for the validation set. It can indicate the generalisation ability and the effect of the CBR method with generated cases (GC-DnCNN). 
 
 ![Fig.7](images/Fig.7.jpg "Fig.7")
