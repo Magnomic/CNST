@@ -2,7 +2,7 @@
 
 ### Authors: Haiwen Du, Zheng Ju, Yu An, Honghui Du, Dongjie Zhu\*, Zhaoshuo Tian, Aonghus Lawlor and Ruihai Dong\*
 
-### This work has been submitted to ICONIP-2023 (Under review)
+### This work has been accepted by ICONIP-2023 
 
 ---
 
